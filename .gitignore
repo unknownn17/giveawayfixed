@@ -1,0 +1,15 @@
+# 1. Add a .gitignore so .env stops being tracked going forward
+@"
+.env
+stats.json
+/bot
+"@ | Out-File -Encoding utf8 .gitignore
+
+# 2. Remove .env from git's tracking (keeps the actual file on disk, just untracks it)
+git rm --cached .env
+
+# 3. Stage the changes and fix the previous commit (since it hasn't been pushed yet,
+#    amending is safe and keeps history clean)
+git add .gitignore
+git add -A
+git commit --amend -m "first"

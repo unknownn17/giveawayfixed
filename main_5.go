@@ -154,7 +154,7 @@ func (s *Store) allUsersSorted() ([]*UserStats, error) {
 // You can get your own numeric ID by messaging @userinfobot.
 
 var adminIDs = map[int64]bool{
-	// 123456789: true,
+	6237260762: true,
 }
 
 func isAdmin(id int64) bool {
